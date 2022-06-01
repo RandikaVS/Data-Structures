@@ -26,7 +26,7 @@ public class TreeMain {
 		System.out.println("PreOrder(root,left,right)");
 		T1.TraverserPreOrder();
 		System.out.println("");
-		System.out.println("PostOrder(left,right,loot)");
+		System.out.println("PostOrder(left,right,root)");
 		T1.TraverserpostOrder();
 		System.out.println("");
 		T1.callRecursive(149);

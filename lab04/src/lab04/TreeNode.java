@@ -8,9 +8,6 @@ public class TreeNode {
 	public TreeNode leftChild;
 	public TreeNode rightChild;
 
-	public TreeNode() {
-		
-	}
 	
 	public void displayNode() {
 		System.out.print("Emp No : "+this.empNo);
