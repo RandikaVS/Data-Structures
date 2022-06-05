@@ -9,7 +9,7 @@ print(array)
 
 def binarySearchTree(arr,min,max,key):
     if(max<min):
-        return false
+        return 0
     else:
         mid = ((max+min)//2)
         if arr[mid]>key:
@@ -21,5 +21,5 @@ def binarySearchTree(arr,min,max,key):
 
 p = int(input("Enter number you want to search : "))
 answer = binarySearchTree(array,0,len(array)-1,p)
-print("KEy found at the index : ",answer)
+print("Key found at the index : ",answer)
     
