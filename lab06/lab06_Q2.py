@@ -1,31 +1,29 @@
-array = []
+A=[]
+x=0
+while(x<10):
+    i=int(input("Enter number : "))
+    A.append(i)
+    x+=1
 
-num = int(input("Enter number of elemets : "))
+print(A)
 
-for i in range(0,num):
-    array.append(int(input()))
-print(array)
-
-def partition(arr,low,high):
+def partition(A,low,high):
     i=(low-1)
-    pivot=arr[high]
+    pivot=A[high]
 
-    for a in range(low,high):
-
-        if arr[a]<=pivot:
-            i=i+1
-            arr[i],arr[a] = arr[a],arr[i]
-    arr[i+1],arr[high] = arr[high],arr[i+1]
+    for j in range(low,high):
+        if(A[j]<=pivot):
+            i+=1
+            A[i],A[j]=A[j],A[i]
+    A[i+1],A[high]=A[high],A[i+1]
     return (i+1)
 
-def quicksort(arr,low,high):
+def quickSort(A,low,high):
+    if(low<high):
+        q=partition(A,low,high)
+        quickSort(A,low,q-1)
+        quickSort(A,q+1,high)
 
-    if low<high:
-        pi=partition(arr,low,high)
-
-        quicksort(arr,low,pi-1)
-        quicksort(arr,pi+1,high)
-
-
-quicksort(array,0,num-1)
-print(array)
+quickSort(A,0,len(A)-1)
+print("After Partition algorithm")
+print(A)
