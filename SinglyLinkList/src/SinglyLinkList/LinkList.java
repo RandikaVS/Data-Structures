@@ -12,7 +12,7 @@ public class LinkList {
     }
     
     public boolean isEmpty(){
-        if(this.length==0)
+        if(getLenght()==0)
             return true;
         else
             return false;
